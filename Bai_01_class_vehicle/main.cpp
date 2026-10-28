@@ -84,13 +84,13 @@ void Xe::ganLoaiXe(const string& loai){
 void Xe::ganGioVao(int gio){
     if(gio>=0&&gio<=23){
         gioVao = gio;
-        tinhPhiDoXe;
+        tinhPhiDoXe();
     }
 }
 void Xe::ganThoiLuongDo(int thoiLuong){
     if(thoiLuong>=1&&thoiLuong<=23&&(gioVao+thoiLuong)<=24 ){
         thoiGianDo = thoiLuong;
-        tinhPhiDoXe():
+        tinhPhiDoXe();
 
     }
 
@@ -112,7 +112,7 @@ string Xe::chuanHoaLoaiXe(const string& loai){
         return "Car";
     }
     if(ketQua == "motorcycle"){
-        return "Motocycle";
+        return "cycle";
     }
     if(ketQua == "bicycle"){
         return "Bicycle";
@@ -127,7 +127,7 @@ void Xe::tinhPhiDoXe(){
     double donGia;
     if(loaiXe == "Car"){
         donGia = 6;    }
-    else if(loaiXe == "Motocycle"){
+    else if(loaiXe == "Motorcycle"){
         donGia = 4;
     }
     else if(loaiXe == "Bicycle"){
@@ -138,7 +138,7 @@ void Xe::tinhPhiDoXe(){
         return;
     }
     bool gioCaoDiem = (gioVao>=6&& gioVao<10)||(gioVao>=15&&gioVao<19);
-    for(int i=1;i<thoiGianDo;i++){
+    for(int i=1;i<=thoiGianDo;i++){
         if(i<=2){
             if(gioCaoDiem){
                 phiDoXe += donGia * 1.3;
