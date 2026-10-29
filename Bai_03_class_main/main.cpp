@@ -1,32 +1,24 @@
 
 using namespace std;
-
 class SystemInterface {
 private:
     BaiDo baiDo1;
     BaiDo baiDo2;
     BaiDo baiDo3;
-
     bool coBaiDo1;
     bool coBaiDo2;
     bool coBaiDo3;
-
 public:
     SystemInterface();
     void runMenu();
 };
-
-// Constructor
 SystemInterface::SystemInterface() {
     coBaiDo1 = false;
     coBaiDo2 = false;
     coBaiDo3 = false;
 }
-
-// Menu chinh
 void SystemInterface::runMenu() {
     int luaChon;
-
     do {
         cout << "\n===== QUAN LY BAI DO XE =====" << endl;
         cout << "1. Tao bai do" << endl;
@@ -40,7 +32,6 @@ void SystemInterface::runMenu() {
         cout << "9. Thoat" << endl;
         cout << "Nhap lua chon: ";
         cin >> luaChon;
-
         switch (luaChon) {
             case 1:
                 cout << "Chuc nang tao bai do." << endl;
